@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace ListChecker
 {
-    class Program
+    class MainClass
     {
         public static void Main(string[] args)
         {
@@ -13,16 +13,17 @@ namespace ListChecker
 
             Console.WriteLine("Please enter a list of 5 comma seperated numbers");
 
-            //var userInput = Console.ReadLine();
+            var userInput = Console.ReadLine();
+            userInput = userInput.Replace(",", String.Empty);
+            List<int> Input = new List<int>();
 
-            //List<string> Input = new List<string>();
+            for (var i = 0; i < userInput.Length; i++)
+            {
+                Input.Add(userInput[i]);
+                Console.WriteLine(userInput[i]);
+            };
 
-            //for (var i = 0; i < 5; i++)
-            //{
-            //    Input.Add(userInput[i].ToString());
-            //};
-
-            //Console.WriteLine(Input);
+            Console.WriteLine(Input);
             
         }
     }
