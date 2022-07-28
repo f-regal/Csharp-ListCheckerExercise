@@ -14,17 +14,22 @@ namespace ListChecker
             Console.WriteLine("Please enter a list of 5 comma seperated numbers");
 
             var userInput = Console.ReadLine();
-            userInput = userInput.Replace(",", String.Empty);
-            List<int> Input = new List<int>();
 
-            for (var i = 0; i < userInput.Length; i++)
+            string[] inputs = userInput.Split(',');
+
+            if (String.IsNullOrEmpty(userInput) || inputs.Length < 5)
             {
-                Input.Add(userInput[i]);
-                Console.WriteLine(userInput[i]);
-            };
+                Console.WriteLine("Invalid, Please Re-try");
+              
+            } else
+            {
 
-            Console.WriteLine(Input);
-            
+            }
+
+
+
+
+
         }
     }
 }
